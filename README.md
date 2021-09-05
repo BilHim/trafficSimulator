@@ -26,4 +26,4 @@ Your contributions are always welcome! Please have a look at the [contribution g
 
 ## Licensing
 
-Check the project license [here](https://github.com/BilHim/trafficSimulator/blob/main/LICENSE).
+Check the project license [here](https://github.com/BilHim/trafficSimulator/blob/main/LICENSE.md).
