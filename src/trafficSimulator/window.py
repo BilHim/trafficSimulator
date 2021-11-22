@@ -115,7 +115,13 @@ class Window:
 
     def background(self, r, g, b):
         """Fills screen with one color."""
-        self.screen.fill((r, g, b))
+        image_file = "src/trafficSimulator/bg.png"
+        self.image = pygame.image.load(image_file)
+        self.rect = self.image.get_rect()
+        self.screen.fill([255, 255, 255])
+        self.screen.blit(self.image, self.rect)
+
+        #self.screen.fill((r, g, b))
 
     def line(self, start_pos, end_pos, color):
         """Draws a line."""
