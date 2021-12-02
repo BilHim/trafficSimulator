@@ -1,4 +1,5 @@
 import numpy as np
+from numpy.random import randint
 
 class Vehicle:
     def __init__(self, config={}):
@@ -12,8 +13,16 @@ class Vehicle:
         # Calculate properties
         self.init_properties()
 
-    def set_default_config(self):    
-        self.l = 4
+    def set_default_config(self):
+        # diff cars --- private car: 90%, trucks: 3%, motor-cycle: 7%
+        r = randint(1, 100)
+        if(r<=3):
+            self.l = 2
+        if(r > 10):
+            self.l = 4
+        if(r > 3 and r <= 10):
+            self.l = 8
+
         self.s0 = 4
         self.T = 1
         self.v_max = 16.6

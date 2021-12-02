@@ -31,7 +31,7 @@ class VehicleGenerator:
         total = sum(pair[0] for pair in self.vehicles)
         r = randint(1, total+1)
         for (weight, config) in self.vehicles:
-            r -= weight
+            r = r - weight
             if r <= 0:
                 return Vehicle(config)
 

@@ -16,8 +16,8 @@ class Window:
         
     def set_default_config(self):
         """Set default configuration"""
-        self.width = 1400
-        self.height = 900
+        self.width = 1599
+        self.height = 741
         self.bg_color = (250, 250, 250)
 
         self.fps = 60
@@ -151,11 +151,19 @@ class Window:
         gfxdraw.aapolygon(self.screen, vertices, color)
         if filled:
             gfxdraw.filled_polygon(self.screen, vertices, color)
-
-    def rotated_box(self, pos, size, angle=None, cos=None, sin=None, centered=True, color=(0, 0, 255), filled=True):
+# car color
+    def rotated_box(self, pos, size, angle=None, cos=None, sin=None, centered=True, color=(0, 0, 0), filled=True):
         """Draws a rectangle center at *pos* with size *size* rotated anti-clockwise by *angle*."""
         x, y = pos
         l, h = size
+        # diffrent color for diffrent
+        if l == 2: # motor cycle
+            color=(255, 0, 0)
+        if l == 4: # private
+            color=(0, 255, 0)
+        if l == 8: # truck
+            color=(0, 0, 255)
+
 
         if angle:
             cos, sin = np.cos(angle), np.sin(angle)
