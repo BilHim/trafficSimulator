@@ -17,11 +17,11 @@ class Vehicle:
         # diff cars --- private car: 90%, trucks: 3%, motor-cycle: 7%
         r = randint(1, 100)
         if(r<=3):
-            self.l = 2
+            self.l = 8
         if(r > 10):
             self.l = 4
         if(r > 3 and r <= 10):
-            self.l = 8
+            self.l = 2
 
         self.s0 = 4
         self.T = 1
