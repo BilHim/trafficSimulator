@@ -1,5 +1,6 @@
 from .vehicle import Vehicle
 from numpy.random import randint
+from collections import deque
 import time
 
 class VehicleGenerator:
@@ -23,6 +24,7 @@ class VehicleGenerator:
             (1, {})
         ]
         self.last_added_time = 0
+        self.q = deque()
 
     def init_properties(self):
         self.upcoming_vehicle = self.generate_vehicle()
@@ -42,7 +44,7 @@ class VehicleGenerator:
         if self.sim.t - self.last_added_time >= 60 / self.vehicle_rate:
             # If time elasped after last added vehicle is
             # greater than vehicle_period; generate a vehicle
-            road = self.sim.roads[self.upcoming_vehicle.path[0]]  
+            road = self.sim.roads[self.upcoming_vehicle.path[0]]
             if len(road.vehicles) == 0\
                or road.vehicles[-1].x > self.upcoming_vehicle.s0 + self.upcoming_vehicle.l:
                 # If there is space for the generated vehicle; add it
@@ -50,5 +52,5 @@ class VehicleGenerator:
                 road.vehicles.append(self.upcoming_vehicle)
                 # Reset last_added_time and upcoming_vehicle
                 self.last_added_time = self.sim.t
-            self.upcoming_vehicle = self.generate_vehicle()
+                self.upcoming_vehicle = self.generate_vehicle()
 

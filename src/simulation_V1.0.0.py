@@ -52,22 +52,20 @@ NORTH_LEFT_TURN = (-f, -b+c+c/2)
 NORTH_LEFT_MERGE = (-e, -5)
 
 sim.create_roads([
-    ((-532, 0), (532, 0)), # width total screen.
-    ((0, -246), (0, 246)), # hight total screen.
-  #  ((-400, -400), (400, 400)),
-   
-    #*curve_road(SOUTH_RIGHT, SOUTH_RIGHT_IN, (a, b-c/2), resolution=n),
-
+    ((55, 246),(49,-80)),
+    ((49,-80),(45, -246)),
+    ((35, -246),(45, 246)),    
+    *curve_road((49,-80), (150,-190), (100,-200), resolution=n), 
 ])
 
 def road(a): return range(a, a+n)
 
 sim.create_gen({
-    'vehicle_rate': 120,
+    'vehicle_rate': 150,
     'vehicles': [
-        [50, {'path': [0]}],
-        [50, {'path': [1]}],
-        # [5, {'path': [1, 23, *road(26+12*n), 9]}],
+        [50, {'path': [0,1]}],
+        [30, {'path': [0,*road(3)]}],
+        [50, {'path': [2]}],
     ]
 })
 # Start simulation
