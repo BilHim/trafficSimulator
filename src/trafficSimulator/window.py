@@ -19,8 +19,8 @@ class Window:
         
     def set_default_config(self):
         """Set default configuration"""
-        self.width = 1167
-        self.height = 540
+        self.width = 1918
+        self.height = 894
         self.bg_color = (250, 250, 250)
 
         self.fps = 60
@@ -44,7 +44,7 @@ class Window:
 
         # To draw text
         pygame.font.init()
-        self.text_font = pygame.font.SysFont('Lucida Console', 16)
+        self.text_font = pygame.font.SysFont('Lucida Console', 18)
 
         # Draw loop
         running = True
@@ -120,7 +120,7 @@ class Window:
     def background(self, r, g, b):
         """Fills screen with one color."""
         #image_file_vscode = "src/trafficSimulator/bg_with_axis.jpeg"
-        image_file_intillij = "/Users/naoryekutiely/Git/trafficSimulator/src/trafficSimulator/bg_new.jpeg"
+        image_file_intillij = "/Users/naoryekutiely/Git/trafficSimulator/src/trafficSimulator/bg_new_york.png"
         self.image = pygame.image.load(image_file_intillij)
         self.rect = self.image.get_rect()
         self.screen.fill([255, 255, 255])
@@ -323,20 +323,18 @@ class Window:
                         color=color)
 
     def draw_status(self):
-        text_fps = self.text_font.render(f't={self.sim.t:.5}', False, (0, 0, 0))
-        text_frc = self.text_font.render(f'n={self.sim.frame_count}', False, (0, 0, 0))
-        vehicle_count = self.text_font.render(f'vehiclecount={self.sim.vehicleCount}', False, (0, 0, 0))
-        road_one_tp = self.text_font.render(f'road_one_tp={self.sim.road_one_tp}', False, (0, 0, 0))
+        text_fps = self.text_font.render(f't={self.sim.t:.5}', False, (255, 255, 255))
+        text_frc = self.text_font.render(f'n={self.sim.frame_count}', False,(255, 255, 255))
+        vehicle_count = self.text_font.render(f'vehiclecount={self.sim.vehicleCount}', False, (255, 255, 255))
+        road_one_tp = self.text_font.render(f'road_one_tp={self.sim.road_one_tp}', False, (255, 255, 255))
 
-        running_time = self.text_font.render(f'running_time={(time.time()-self.running_time):.5}', False, (0, 0, 0))
+        running_time = self.text_font.render(f'running_time={(time.time()-self.running_time):.5}', False, (255, 255, 255))
         
-        self.screen.blit(text_fps, (0, 0))
-        self.screen.blit(text_frc, (100, 0))
-        self.screen.blit(vehicle_count, (200, 0))
-
-        self.screen.blit(road_one_tp, (250, 250))
-
-        self.screen.blit(running_time, (20, 130))
+        #self.screen.blit(text_fps, (0, 0))
+        #self.screen.blit(text_frc, (100, 0))
+        self.screen.blit(vehicle_count, (0, 0))
+        self.screen.blit(road_one_tp, (200, 0))
+        self.screen.blit(running_time, (420, 0))
 
 
     def draw(self):
