@@ -53,4 +53,4 @@ class VehicleGenerator:
                 # Reset last_added_time and upcoming_vehicle
                 self.last_added_time = self.sim.t
                 self.upcoming_vehicle = self.generate_vehicle()
-
+                self.sim.vehicleCount += 1

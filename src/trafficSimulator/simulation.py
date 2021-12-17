@@ -19,6 +19,8 @@ class Simulation:
         self.roads = []         # Array to store roads
         self.generators = []
         self.traffic_signals = []
+        self.vehicleCount = 0
+        self.road_one_tp = 0
 
     def create_road(self, start, end):
         road = Road(start, end)
@@ -53,7 +55,7 @@ class Simulation:
             signal.update(self)
 
         # Check roads for out of bounds vehicle
-        for road in self.roads:
+        for index, road in enumerate(self.roads):
             # If road has no vehicles, continue
             if len(road.vehicles) == 0: continue
             # If not
@@ -70,8 +72,12 @@ class Simulation:
                     # Add it to the next road
                     next_road_index = vehicle.path[vehicle.current_road_index]
                     self.roads[next_road_index].vehicles.append(new_vehicle)
+                else:
+                    self.vehicleCount -= 1
+                    if(index == 2): self.road_one_tp +=1
+
                 # In all cases, remove it from its road
-                road.vehicles.popleft() 
+                road.vehicles.popleft()
         # Increment time
         self.t += self.dt
         self.frame_count += 1

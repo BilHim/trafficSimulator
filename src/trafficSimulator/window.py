@@ -1,6 +1,9 @@
+import datetime
+
 import pygame
 from pygame import gfxdraw
 import numpy as np
+import time
 
 class Window:
     def __init__(self, sim, config={}):
@@ -16,17 +19,18 @@ class Window:
         
     def set_default_config(self):
         """Set default configuration"""
-        self.width = 1599
-        self.height = 741
+        self.width = 1167
+        self.height = 540
         self.bg_color = (250, 250, 250)
 
         self.fps = 60
-        self.zoom = 5
+        self.zoom = 0
         self.offset = (0, 0)
 
         self.mouse_last = (0, 0)
         self.mouse_down = False
 
+        self.running_time = time.time()
 
     def loop(self, loop=None):
         """Shows a window visualizing the simulation and runs the loop function."""
@@ -115,8 +119,9 @@ class Window:
 
     def background(self, r, g, b):
         """Fills screen with one color."""
-        image_file = "src/trafficSimulator/bg_with_axis.jpeg"
-        self.image = pygame.image.load(image_file)
+        #image_file_vscode = "src/trafficSimulator/bg_with_axis.jpeg"
+        image_file_intillij = "/Users/naoryekutiely/Git/trafficSimulator/src/trafficSimulator/bg_new.jpeg"
+        self.image = pygame.image.load(image_file_intillij)
         self.rect = self.image.get_rect()
         self.screen.fill([255, 255, 255])
         self.screen.blit(self.image, self.rect)
@@ -320,9 +325,18 @@ class Window:
     def draw_status(self):
         text_fps = self.text_font.render(f't={self.sim.t:.5}', False, (0, 0, 0))
         text_frc = self.text_font.render(f'n={self.sim.frame_count}', False, (0, 0, 0))
+        vehicle_count = self.text_font.render(f'vehiclecount={self.sim.vehicleCount}', False, (0, 0, 0))
+        road_one_tp = self.text_font.render(f'road_one_tp={self.sim.road_one_tp}', False, (0, 0, 0))
+
+        running_time = self.text_font.render(f'running_time={(time.time()-self.running_time):.5}', False, (0, 0, 0))
         
         self.screen.blit(text_fps, (0, 0))
         self.screen.blit(text_frc, (100, 0))
+        self.screen.blit(vehicle_count, (200, 0))
+
+        self.screen.blit(road_one_tp, (250, 250))
+
+        self.screen.blit(running_time, (20, 130))
 
 
     def draw(self):
