@@ -1,4 +1,4 @@
-def curve_points(start, end, control, resolution=5):
+def curve_points(start, end, control, resolution):
 	# If curve is a straight line
 	if (start[0] - end[0])*(start[1] - end[1]) == 0:
 		return [start, end]
@@ -14,8 +14,8 @@ def curve_points(start, end, control, resolution=5):
 
 	return path
 
-def curve_road(start, end, control, resolution=15):
-	points = curve_points(start, end, control, resolution=resolution)
+def curve_road(start, end, control, resolution):
+	points = curve_points(start, end, control, resolution)
 	return [(points[i-1], points[i]) for i in range(1, len(points))]
 
 TURN_LEFT = 0
