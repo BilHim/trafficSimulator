@@ -12,7 +12,7 @@ d = 5
 e = 80
 f = 40
 
-resolutions = [3,4,1,3,1,3,1,3,4,1,3,1,3,1]
+resolutions = [3,4,1,3,1,3,1]
 indexCount = 0
 
 sim.create_roads([
@@ -25,13 +25,13 @@ sim.create_roads([
     *curve_road((625, -450), (760, -430), (675, -450), resolutions[5]),     #5
     ((760, -430), (926, -380)),                                             #6
     # main road down right to left - roads 7-13
-    *curve_road( (-860,-285-up),(-926,-215-up), (-890,-240-up), resolutions[7]),     #7
-    *curve_road( (-770, -358-up),(-860, -285-up), (-840, -320-up), resolutions[8]),  #8
-    ( (-450, -430-up),(-770, -358-up)),                                              #9
-    *curve_road( (-300, -455-up),(-450, -430-up), (-340, -460-up),resolutions[10]),  #10
-    ((625, -450-up),(-300, -455-up)),                                                #11
-    *curve_road( (760, -430-up),(625, -450-up), (675, -450-up), resolutions[12]),    #12
-    ( (926, -380-up),(760, -430-up)),                                                #13
+    #*curve_road( (-860,-285-up),(-926,-215-up), (-890,-240-up), resolutions[7]),     #7
+    #*curve_road( (-770, -358-up),(-860, -285-up), (-840, -320-up), resolutions[8]),  #8
+    #( (-450, -430-up),(-770, -358-up)),                                              #9
+    #*curve_road( (-300, -455-up),(-450, -430-up), (-340, -460-up),resolutions[10]),  #10
+    #((625, -450-up),(-300, -455-up)),                                                #11
+    #*curve_road( (760, -430-up),(625, -450-up), (675, -450-up), resolutions[12]),    #12
+    #( (926, -380-up),(760, -430-up)),                                                #13
 ])
 
 def road(a):
@@ -44,7 +44,7 @@ sim.create_gen({
     'vehicle_rate': 150,
     'vehicles': [
         [50, {'path': [*road(0), *road(1), *road(2), *road(3), *road(4), *road(5), *road(6)]}],       #car's on main road down left to right
-        [50, {'path': [*road(13), *road(12), *road(11), *road(10), *road(9), *road(8), *road(7)]}]      #car's on main road down right to left
+        #[50, {'path': [*road(13), *road(12), *road(11), *road(10), *road(9), *road(8), *road(7)]}]      #car's on main road down right to left
     ]
 })
 # Start simulation

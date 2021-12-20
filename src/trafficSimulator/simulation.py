@@ -74,7 +74,7 @@ class Simulation:
                     self.roads[next_road_index].vehicles.append(new_vehicle)
                 else:
                     self.vehicleCount -= 1
-                    if(index == 2): self.road_one_tp +=1
+                    if(index == 15): self.road_one_tp +=1
 
                 # In all cases, remove it from its road
                 road.vehicles.popleft()
