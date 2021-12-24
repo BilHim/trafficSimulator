@@ -1,6 +1,7 @@
 import numpy as np
 from trafficSimulator import *
 
+
 sim = Simulation()
 
 up = 7
@@ -28,6 +29,8 @@ C10_EAST_WEST=[RIGHT,LEFT]
 C10_EAST_SOUTH=[RIGHT,DOWN]
 
 C10_WEST_SOUTH=[LEFT,DOWN]
+
+
 
 
 
