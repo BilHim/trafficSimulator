@@ -119,9 +119,10 @@ class Window:
 
     def background(self, r, g, b):
         """Fills screen with one color."""
-        #image_file_vscode = "src/trafficSimulator/bg_with_axis.jpeg"
-        image_file_intillij = "trafficSimulator/bg_new_york_axis.png"
-        self.image = pygame.image.load(image_file_intillij)
+        image_file_vscode = "src/trafficSimulator/bg_new_york_axis.png"
+        #image_file_intillij = "trafficSimulator/bg_new_york_axis.png"
+        #self.image = pygame.image.load(image_file_intillij)
+        self.image = pygame.image.load(image_file_vscode)
         self.rect = self.image.get_rect()
         self.screen.fill([255, 255, 255])
         self.screen.blit(self.image, self.rect)
