@@ -2,7 +2,7 @@ from scipy.spatial import distance
 from collections import deque
 
 class Node:
-    def __init__(self, start, mode, end):
+    def __init__(self, start, end, mode):
         self.start = start
         self.end = end
         self.mode = mode # mode pick the direction
@@ -15,10 +15,16 @@ class Node:
             self.angle_sin = abs((self.start[1]-self.end[1])) / self.length
             self.angle_cos = abs((self.start[0]-self.end[0])) / self.length
             # self.angle = np.arctan2(self.end[1]-self.start[1], self.end[0]-self.start[0])
-        else:
+        elif mode == 1:
             self.length = distance.euclidean(self.start, self.end)
             self.angle_sin = (self.end[1]-self.start[1]) / self.length
             self.angle_cos = (self.end[0]-self.start[0]) / self.length
+            # self.angle = np.arctan2(self.end[1]-self.start[1], self.end[0]-self.start[0])
+        else:
+            pass
+            # self.length = distance.euclidean(self.start, self.end)
+            # self.angle_sin = (self.end[1]-self.start[1]) / self.length
+            # self.angle_cos = (self.end[0]-self.start[0]) / self.length
             # self.angle = np.arctan2(self.end[1]-self.start[1], self.end[0]-self.start[0])
         self.has_traffic_signal = False
 
