@@ -7,3 +7,4 @@ from .vehicle_generator import *
 from .traffic_signal import *
 from .edge import *
 from .vertex import *
+from .graph import *

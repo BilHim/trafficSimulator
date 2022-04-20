@@ -5,6 +5,7 @@ from pygame import gfxdraw
 import numpy as np
 import time
 
+
 class Window:
     def __init__(self, sim, config={}):
         # Simulation to draw
@@ -16,7 +17,7 @@ class Window:
         # Update configurations
         for attr, val in config.items():
             setattr(self, attr, val)
-        
+
     def set_default_config(self):
         """Set default configuration"""
         self.width = 1853
@@ -34,7 +35,7 @@ class Window:
 
     def loop(self, loop=None):
         """Shows a window visualizing the simulation and runs the loop function."""
-        
+
         # Create a pygame window
         self.screen = pygame.display.set_mode((self.width, self.height))
         pygame.display.flip()
@@ -50,7 +51,8 @@ class Window:
         running = True
         while running:
             # Update simulation
-            if loop: loop(self.sim)
+            if loop:
+                loop(self.sim)
 
             # Draw simulation
             self.draw()
@@ -75,10 +77,12 @@ class Window:
                         self.mouse_down = True
                     if event.button == 4:
                         # Mouse wheel up
-                        self.zoom *=  (self.zoom**2+self.zoom/4+1) / (self.zoom**2+1)
+                        self.zoom *= (self.zoom**2+self.zoom /
+                                      4+1) / (self.zoom**2+1)
                     if event.button == 5:
-                        # Mouse wheel down 
-                        self.zoom *= (self.zoom**2+1) / (self.zoom**2+self.zoom/4+1)
+                        # Mouse wheel down
+                        self.zoom *= (self.zoom**2+1) / \
+                            (self.zoom**2+self.zoom/4+1)
                 elif event.type == pygame.MOUSEMOTION:
                     # Drag content
                     if self.mouse_down:
@@ -86,7 +90,7 @@ class Window:
                         x2, y2 = pygame.mouse.get_pos()
                         self.offset = ((x2-x1)/self.zoom, (y2-y1)/self.zoom)
                 elif event.type == pygame.MOUSEBUTTONUP:
-                    self.mouse_down = False           
+                    self.mouse_down = False
 
     def run(self, steps_per_update=1):
         """Runs the simulation by updating in every loop."""
@@ -116,10 +120,9 @@ class Window:
             int(-self.offset[1] + (y - self.height/2)/self.zoom)
         )
 
-
     def background(self, r, g, b):
         """Fills screen with one color."""
-        image_file_vscode = "src/trafficSimulator/bg_new_york_axis.png"
+        image_file_vscode = "bg_new_york_axis.png"
         #image_file_intillij = "trafficSimulator/bg_new_york_axis.png"
         #self.image = pygame.image.load(image_file_intillij)
         self.image = pygame.image.load(image_file_vscode)
@@ -151,52 +154,51 @@ class Window:
         if filled:
             gfxdraw.filled_circle(self.screen, *pos, radius, color)
 
-
-
     def polygon(self, vertices, color, filled=True):
         gfxdraw.aapolygon(self.screen, vertices, color)
         if filled:
             gfxdraw.filled_polygon(self.screen, vertices, color)
 # car color
+
     def rotated_box(self, pos, size, angle=None, cos=None, sin=None, centered=True, color=(0, 0, 0), filled=True):
         """Draws a rectangle center at *pos* with size *size* rotated anti-clockwise by *angle*."""
         x, y = pos
         l, h = size
         # diffrent color for diffrent
-        if l == 2: # motor cycle
-            color=(255, 0, 0)
-        if l == 4: # private
-            color=(0, 255, 0)
-        if l == 8: # truck
-            color=(0, 0, 255)
-
+        if l == 2:  # motor cycle
+            color = (255, 0, 0)
+        if l == 4:  # private
+            color = (0, 255, 0)
+        if l == 8:  # truck
+            color = (0, 0, 255)
 
         if angle:
             cos, sin = np.cos(angle), np.sin(angle)
-        
-        vertex = lambda e1, e2: (
+
+        def vertex(e1, e2): return (
             x + (e1*l*cos + e2*h*sin)/2,
             y + (e1*l*sin - e2*h*cos)/2
         )
 
         if centered:
             vertices = self.convert(
-                [vertex(*e) for e in [(-1,-1), (-1, 1), (1,1), (1,-1)]]
+                [vertex(*e) for e in [(-1, -1), (-1, 1), (1, 1), (1, -1)]]
             )
         else:
             vertices = self.convert(
-                [vertex(*e) for e in [(0,-1), (0, 1), (2,1), (2,-1)]]
+                [vertex(*e) for e in [(0, -1), (0, 1), (2, 1), (2, -1)]]
             )
 
         self.polygon(vertices, color, filled=filled)
 
     def rotated_rect(self, pos, size, angle=None, cos=None, sin=None, centered=True, color=(0, 0, 255)):
-        self.rotated_box(pos, size, angle=angle, cos=cos, sin=sin, centered=centered, color=color, filled=False)
+        self.rotated_box(pos, size, angle=angle, cos=cos, sin=sin,
+                         centered=centered, color=color, filled=False)
 
     def arrow(self, pos, size, angle=None, cos=None, sin=None, color=(150, 150, 190)):
         if angle:
             cos, sin = np.cos(angle), np.sin(angle)
-        
+
         self.rotated_box(
             pos,
             size,
@@ -215,7 +217,6 @@ class Window:
             centered=False
         )
 
-
     def draw_axes(self, color=(100, 100, 100)):
         x_start, y_start = self.inverse_convert(0, 0)
         x_end, y_end = self.inverse_convert(self.width, self.height)
@@ -230,7 +231,7 @@ class Window:
             color
         )
 
-    def draw_grid(self, unit=50, color=(150,150,150)):
+    def draw_grid(self, unit=50, color=(150, 150, 150)):
         x_start, y_start = self.inverse_convert(0, 0)
         x_end, y_end = self.inverse_convert(self.width, self.height)
 
@@ -274,11 +275,13 @@ class Window:
             # )
 
             # Draw road arrow
-            if road.length > 5: 
+            if road.length > 5:
                 for i in np.arange(-0.5*road.length, 0.5*road.length, 10):
                     pos = (
-                        road.start[0] + (road.length/2 + i + 3) * road.angle_cos,
-                        road.start[1] + (road.length/2 + i + 3) * road.angle_sin
+                        road.start[0] + (road.length/2 + i +
+                                         3) * road.angle_cos,
+                        road.start[1] + (road.length/2 + i +
+                                         3) * road.angle_sin
                     )
 
                     self.arrow(
@@ -286,18 +289,14 @@ class Window:
                         (-1.25, 0.2),
                         cos=road.angle_cos,
                         sin=road.angle_sin
-                    )   
-            
-
-
-            # TODO: Draw road arrow
+                    )
 
     def draw_vehicle(self, vehicle, road):
         l, h = vehicle.l,  2
         sin, cos = road.angle_sin, road.angle_cos
 
-        x = road.start[0] + cos * vehicle.x 
-        y = road.start[1] + sin * vehicle.x 
+        x = road.start[0] + cos * vehicle.x
+        y = road.start[1] + sin * vehicle.x
 
         self.rotated_box((x, y), (l, h), cos=cos, sin=sin, centered=True)
 
@@ -314,7 +313,7 @@ class Window:
                 for road in signal.roads[i]:
                     a = 0
                     position = (
-                        (1-a)*road.end[0] + a*road.start[0],        
+                        (1-a)*road.end[0] + a*road.start[0],
                         (1-a)*road.end[1] + a*road.start[1]
                     )
                     self.rotated_box(
@@ -324,19 +323,23 @@ class Window:
                         color=color)
 
     def draw_status(self):
-        text_fps = self.text_font.render(f't={self.sim.t:.5}', False, (255, 255, 255))
-        text_frc = self.text_font.render(f'n={self.sim.frame_count}', False,(255, 255, 255))
-        vehicle_count = self.text_font.render(f'vehiclecount={self.sim.vehicleCount}', False, (255, 255, 255))
-        road_one_tp = self.text_font.render(f'road_one_tp={self.sim.road_one_tp}', False, (255, 255, 255))
+        text_fps = self.text_font.render(
+            f't={self.sim.t:.5}', False, (255, 255, 255))
+        text_frc = self.text_font.render(
+            f'n={self.sim.frame_count}', False, (255, 255, 255))
+        vehicle_count = self.text_font.render(
+            f'vehiclecount={self.sim.vehicleCount}', False, (255, 255, 255))
+        road_one_tp = self.text_font.render(
+            f'road_one_tp={self.sim.road_one_tp}', False, (255, 255, 255))
 
-        running_time = self.text_font.render(f'running_time={(time.time()-self.running_time):.5}', False, (255, 255, 255))
-        
+        running_time = self.text_font.render(
+            f'running_time={(time.time()-self.running_time):.5}', False, (255, 255, 255))
+
         #self.screen.blit(text_fps, (0, 0))
         #self.screen.blit(text_frc, (100, 0))
         self.screen.blit(vehicle_count, (0, 0))
         self.screen.blit(road_one_tp, (200, 0))
         self.screen.blit(running_time, (420, 0))
-
 
     def draw(self):
         # Fill background
@@ -353,4 +356,3 @@ class Window:
 
         # Draw status info
         self.draw_status()
-        
