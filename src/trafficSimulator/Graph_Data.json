@@ -1,0 +1,121 @@
+{
+    "nodes":[
+        {
+            "name":"V_1",
+            "coordinates": 
+                {
+                    "x":0,
+                    "y":0
+                },
+            "edges": ["E_1","E_2","E_3","E_4"],
+            "isLeaf": false
+        },
+        {
+            "name":"V_2",
+            "coordinates": 
+                {
+                    "x":0,
+                    "y":120
+                },
+            "edges": ["E_5","E_6","E_4","E_7"],
+            "isLeaf": false
+        },
+        {
+            "name":"VL_1",
+            "coordinates": 
+                {
+                    "x":-100,
+                    "y":0
+                },
+            "edges": ["","E_1","",""],
+            "isLeaf": true
+        },
+        {
+            "name":"VL_2",
+            "coordinates": 
+                {
+                    "x":0,
+                    "y":-100
+                },
+            "edges": ["","","","E_3"],
+            "isLeaf": true
+        },
+        {
+            "name":"VL_3",
+            "coordinates": 
+                {
+                    "x":100,
+                    "y":0
+                },
+            "edges": ["E_2","","",""],
+            "isLeaf": true
+        },
+        {
+            "name":"VL_4",
+            "coordinates": 
+                {
+                    "x":-100,
+                    "y":120
+                },
+            "edges": ["","E_5","",""],
+            "isLeaf": true
+        },
+        {
+            "name":"VL_5",
+            "coordinates": 
+                {
+                    "x":100,
+                    "y":120
+                },
+            "edges": ["E_6","","",""],
+            "isLeaf": true
+        },
+        {
+            "name":"VL_6",
+            "coordinates": 
+                {
+                    "x":0,
+                    "y":220
+                },
+            "edges": ["","","E_7",""],
+            "isLeaf": true
+        }
+    ],
+    "edges":[
+        {
+            "name": "E_1",
+            "nodes":["VL_1","V_1"],
+            "weight":1
+        },
+        {
+            "name": "E_2",
+            "nodes":["V_1","VL_3"],
+            "weight":1
+        },
+        {
+            "name": "E_3",
+            "nodes":["VL_2","V_1"],
+            "weight":1
+        },
+        {
+            "name": "E_4",
+            "nodes":["V_1","V_2"],
+            "weight":1
+        },
+        {
+            "name": "E_5",
+            "nodes":["V_2","VL_4"],
+            "weight":1
+        },
+        {
+            "name": "E_6",
+            "nodes":["V_2","VL_5"],
+            "weight":1
+        },
+        {
+            "name": "E_7",
+            "nodes":["V_2","VL_6"],
+            "weight":1
+        }
+    ]
+}

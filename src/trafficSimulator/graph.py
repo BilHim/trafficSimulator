@@ -11,7 +11,7 @@ class Graph:
 
     def initG(self):
         f = open(
-            "/Users/naoryekutiely/Git/trafficSimulator/src/trafficSimulator/Graph_Store.json")
+            "/Users/naoryekutiely/Git/trafficSimulator/src/trafficSimulator/Graph_Data.json")
         self.graphData = json.load(f)
         for node in self.graphData["nodes"]:
             self.G.add_node(node["name"], coordinates=node["coordinates"],
