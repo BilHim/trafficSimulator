@@ -7,11 +7,14 @@ sim = Simulation()
 G = Graph()
 
 sim.create_roads(G.getEdgesTuples())
+sim.create_roads([
+    ((466, -143), (526, -143)),
+])
 
 sim.create_gen({
-    'vehicle_rate': 150,
+    'vehicle_rate': 10,
     'vehicles': [
-        [10, {'path': G.getPath("V_0_0_D", "V_0_2_U")}],
+        [2, {'path': G.getPath("V_0_0_U", "V_1_3_D")}],
     ]
 })
 
