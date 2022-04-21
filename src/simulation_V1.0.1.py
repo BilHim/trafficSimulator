@@ -7,15 +7,15 @@ sim = Simulation()
 G = Graph()
 
 sim.create_roads(G.getEdgesTuples())
-sim.create_roads([
-    ((466, -143), (526, -143)),
-])
+# sim.create_roads([
+#     ((466, -143), (526, -143)),
+# ])
 
 # TODO missing leaf nodes on the right of all rows 1-4.. need another node 17
 sim.create_gen({
     'vehicle_rate': 10,
     'vehicles': [
-        [2, {'path': G.getPath("V_0_0_U", "V_1_3_D")}],
+        [2, {'path': G.getPath("V_1_16_D", "V_1_7_D")}],
     ]
 })
 
