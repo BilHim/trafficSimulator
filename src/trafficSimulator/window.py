@@ -20,8 +20,8 @@ class Window:
 
     def set_default_config(self):
         """Set default configuration"""
-        self.width = 1853
-        self.height = 1031
+        self.width = 1757
+        self.height = 843
         self.bg_color = (250, 250, 250)
 
         self.fps = 60
@@ -123,8 +123,6 @@ class Window:
     def background(self, r, g, b):
         """Fills screen with one color."""
         image_file_vscode = "src/trafficSimulator/bg.png"
-        #image_file_intillij = "trafficSimulator/bg_new_york_axis.png"
-        #self.image = pygame.image.load(image_file_intillij)
         self.image = pygame.image.load(image_file_vscode)
         self.rect = self.image.get_rect()
         self.screen.fill([255, 255, 255])
