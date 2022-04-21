@@ -14,8 +14,7 @@ class Graph:
             "/Users/naoryekutiely/Git/trafficSimulator/src/trafficSimulator/Graph_Data.json")
         self.graphData = json.load(f)
         for node in self.graphData["nodes"]:
-            self.G.add_node(node["name"], coordinates=node["coordinates"],
-                            edges=node["edges"], isLeaf=node["isLeaf"])
+            self.G.add_node(node["name"], coordinates=node["coordinates"])
         for edge in self.graphData["edges"]:
             self.G.add_edge(edge["nodes"][0], edge["nodes"]
                             [1], name=edge["name"], weight=edge["weight"], nodes=edge["nodes"])

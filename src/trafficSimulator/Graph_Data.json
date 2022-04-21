@@ -1,121 +1,464 @@
 {
     "nodes":[
         {
-            "name":"V_1",
+            "name":"V_0_0_U",
             "coordinates": 
                 {
-                    "x":0,
-                    "y":0
-                },
-            "edges": ["E_1","E_2","E_3","E_4"],
-            "isLeaf": false
+                    "x":-586,
+                    "y":-258
+                }
         },
         {
-            "name":"V_2",
+            "name":"V_0_1_U",
             "coordinates": 
                 {
-                    "x":0,
-                    "y":120
-                },
-            "edges": ["E_5","E_6","E_4","E_7"],
-            "isLeaf": false
+                    "x":-486,
+                    "y":-258
+                }
         },
         {
-            "name":"VL_1",
+            "name":"V_0_2_U",
             "coordinates": 
                 {
-                    "x":-100,
-                    "y":0
-                },
-            "edges": ["","E_1","",""],
-            "isLeaf": true
+                    "x":-426,
+                    "y":-258
+                }
         },
         {
-            "name":"VL_2",
+            "name":"V_0_3_U",
             "coordinates": 
                 {
-                    "x":0,
-                    "y":-100
-                },
-            "edges": ["","","","E_3"],
-            "isLeaf": true
+                    "x":-380,
+                    "y":-258
+                }
         },
         {
-            "name":"VL_3",
+            "name":"V_0_4_U",
             "coordinates": 
                 {
-                    "x":100,
-                    "y":0
-                },
-            "edges": ["E_2","","",""],
-            "isLeaf": true
+                    "x":-306,
+                    "y":-258
+                }
         },
         {
-            "name":"VL_4",
+            "name":"V_0_5_U",
             "coordinates": 
                 {
-                    "x":-100,
-                    "y":120
-                },
-            "edges": ["","E_5","",""],
-            "isLeaf": true
+                    "x":-186,
+                    "y":-258
+                }
         },
         {
-            "name":"VL_5",
+            "name":"V_0_6_U",
             "coordinates": 
                 {
-                    "x":100,
-                    "y":120
-                },
-            "edges": ["E_6","","",""],
-            "isLeaf": true
+                    "x":-130,
+                    "y":-258
+                }
         },
         {
-            "name":"VL_6",
+            "name":"V_0_7_U",
             "coordinates": 
                 {
-                    "x":0,
-                    "y":220
-                },
-            "edges": ["","","E_7",""],
-            "isLeaf": true
+                    "x":50,
+                    "y":-258
+                }
+        },
+        {
+            "name":"V_0_8_U",
+            "coordinates": 
+                {
+                    "x":106,
+                    "y":-258
+                }
+        },
+        {
+            "name":"V_0_9_U",
+            "coordinates": 
+                {
+                    "x":173,
+                    "y":-258
+                }
+        },
+        {
+            "name":"V_0_10_U",
+            "coordinates": 
+                {
+                    "x":233,
+                    "y":-258
+                }
+        },
+        {
+            "name":"V_0_11_U",
+            "coordinates": 
+                {
+                    "x":293,
+                    "y":-258
+                }
+        },
+        {
+            "name":"V_0_12_U",
+            "coordinates": 
+                {
+                    "x":350,
+                    "y":-258
+                }
+        },
+        {
+            "name":"V_0_0_D",
+            "coordinates": 
+                {
+                    "x":-586,
+                    "y":-252
+                }
+        },
+        {
+            "name":"V_0_1_D",
+            "coordinates": 
+                {
+                    "x":-486,
+                    "y":-252
+                }
+        },
+        {
+            "name":"V_0_2_D",
+            "coordinates": 
+                {
+                    "x":-426,
+                    "y":-252
+                }
+        },
+        {
+            "name":"V_0_3_D",
+            "coordinates": 
+                {
+                    "x":-380,
+                    "y":-252
+                }
+        },
+        {
+            "name":"V_0_4_D",
+            "coordinates": 
+                {
+                    "x":-306,
+                    "y":-252
+                }
+        },
+        {
+            "name":"V_0_5_D",
+            "coordinates": 
+                {
+                    "x":-186,
+                    "y":-252
+                }
+        },
+        {
+            "name":"V_0_6_D",
+            "coordinates": 
+                {
+                    "x":-130,
+                    "y":-252
+                }
+        },
+        {
+            "name":"V_0_7_D",
+            "coordinates": 
+                {
+                    "x":50,
+                    "y":-252
+                }
+        },
+        {
+            "name":"V_0_8_D",
+            "coordinates": 
+                {
+                    "x":106,
+                    "y":-252
+                }
+        },
+        {
+            "name":"V_0_9_D",
+            "coordinates": 
+                {
+                    "x":173,
+                    "y":-252
+                }
+        },
+        {
+            "name":"V_0_10_D",
+            "coordinates": 
+                {
+                    "x":233,
+                    "y":-252
+                }
+        },
+        {
+            "name":"V_0_11_D",
+            "coordinates": 
+                {
+                    "x":293,
+                    "y":-252
+                }
+        },
+        {
+            "name":"V_0_12_D",
+            "coordinates": 
+                {
+                    "x":350,
+                    "y":-252
+                }
         }
     ],
     "edges":[
         {
             "name": "E_1",
-            "nodes":["VL_1","V_1"],
+            "nodes":["V_0_12_U","V_0_11_U"],
             "weight":1
         },
         {
             "name": "E_2",
-            "nodes":["V_1","VL_3"],
+            "nodes":["V_0_11_U","V_0_10_U"],
             "weight":1
         },
         {
             "name": "E_3",
-            "nodes":["VL_2","V_1"],
+            "nodes":["V_0_10_U","V_0_9_U"],
             "weight":1
         },
         {
             "name": "E_4",
-            "nodes":["V_1","V_2"],
+            "nodes":["V_0_9_U","V_0_8_U"],
             "weight":1
         },
         {
             "name": "E_5",
-            "nodes":["V_2","VL_4"],
+            "nodes":["V_0_8_U","V_0_7_U"],
             "weight":1
         },
         {
             "name": "E_6",
-            "nodes":["V_2","VL_5"],
-            "weight":1
+            "nodes":["V_0_7_U","V_0_6_U"],
+            "weight":3
         },
         {
             "name": "E_7",
-            "nodes":["V_2","VL_6"],
+            "nodes":["V_0_6_U","V_0_5_U"],
             "weight":1
+        },
+        {
+            "name": "E_8",
+            "nodes":["V_0_5_U","V_0_4_U"],
+            "weight":2
+        },
+        {
+            "name": "E_9",
+            "nodes":["V_0_4_U","V_0_3_U"],
+            "weight":1
+        },
+        {
+            "name": "E_10",
+            "nodes":["V_0_3_U","V_0_2_U"],
+            "weight":1
+        },
+        {
+            "name": "E_11",
+            "nodes":["V_0_2_U","V_0_1_U"],
+            "weight":1
+        },
+        {
+            "name": "E_12",
+            "nodes":["V_0_1_U","V_0_0_U"],
+            "weight":1
+        },
+        {
+            "name": "E_13",
+            "nodes":["V_0_11_D","V_0_12_D"],
+            "weight":1
+        },
+        {
+            "name": "E_14",
+            "nodes":["V_0_10_D","V_0_11_D"],
+            "weight":1
+        },
+        {
+            "name": "E_15",
+            "nodes":["V_0_9_D","V_0_10_D"],
+            "weight":1
+        },
+        {
+            "name": "E_16",
+            "nodes":["V_0_8_D","V_0_9_D"],
+            "weight":1
+        },
+        {
+            "name": "E_17",
+            "nodes":["V_0_7_D","V_0_8_D"],
+            "weight":1
+        },
+        {
+            "name": "E_18",
+            "nodes":["V_0_6_D","V_0_7_D"],
+            "weight":3
+        },
+        {
+            "name": "E_19",
+            "nodes":["V_0_5_D","V_0_6_D"],
+            "weight":1
+        },
+        {
+            "name": "E_20",
+            "nodes":["V_0_4_D","V_0_5_D"],
+            "weight":2
+        },
+        {
+            "name": "E_21",
+            "nodes":["V_0_3_D","V_0_4_D"],
+            "weight":1
+        },
+        {
+            "name": "E_22",
+            "nodes":["V_0_2_D","V_0_3_D"],
+            "weight":1
+        },
+        {
+            "name": "E_23",
+            "nodes":["V_0_1_D","V_0_2_D"],
+            "weight":1
+        },
+        {
+            "name": "E_24",
+            "nodes":["V_0_0_D","V_0_1_D"],
+            "weight":1
+        },
+        {
+            "name": "E_0_0_D",
+            "nodes":["V_0_0_U","V_0_0_D"],
+            "weight":0
+        },
+        {
+            "name": "E_0_0_U",
+            "nodes":["V_0_0_D","V_0_0_U"],
+            "weight":0
+        },
+        {
+            "name": "E_0_1_D",
+            "nodes":["V_0_1_U","V_0_1_D"],
+            "weight":0
+        },
+        {
+            "name": "E_0_1_U",
+            "nodes":["V_0_1_D","V_0_1_U"],
+            "weight":0
+        },
+        {
+            "name": "E_0_2_D",
+            "nodes":["V_0_2_U","V_0_2_D"],
+            "weight":0
+        },
+        {
+            "name": "E_0_2_U",
+            "nodes":["V_0_2_D","V_0_2_U"],
+            "weight":0
+        },
+        {
+            "name": "E_0_3_D",
+            "nodes":["V_0_3_U","V_0_3_D"],
+            "weight":0
+        },
+        {
+            "name": "E_0_3_U",
+            "nodes":["V_0_3_D","V_0_3_U"],
+            "weight":0
+        },
+        {
+            "name": "E_0_4_D",
+            "nodes":["V_0_4_U","V_0_4_D"],
+            "weight":0
+        },
+        {
+            "name": "E_0_4_U",
+            "nodes":["V_0_4_D","V_0_4_U"],
+            "weight":0
+        },
+        {
+            "name": "E_0_5_D",
+            "nodes":["V_0_5_U","V_0_5_D"],
+            "weight":0
+        },
+        {
+            "name": "E_0_5_U",
+            "nodes":["V_0_5_D","V_0_5_U"],
+            "weight":0
+        },
+        {
+            "name": "E_0_6_D",
+            "nodes":["V_0_6_U","V_0_6_D"],
+            "weight":0
+        },
+        {
+            "name": "E_0_6_U",
+            "nodes":["V_0_6_D","V_0_6_U"],
+            "weight":0
+        },
+        {
+            "name": "E_0_7_D",
+            "nodes":["V_0_7_U","V_0_7_D"],
+            "weight":0
+        },
+        {
+            "name": "E_0_7_U",
+            "nodes":["V_0_7_D","V_0_7_U"],
+            "weight":0
+        },
+        {
+            "name": "E_0_8_D",
+            "nodes":["V_0_8_U","V_0_8_D"],
+            "weight":0
+        },
+        {
+            "name": "E_0_8_U",
+            "nodes":["V_0_8_D","V_0_8_U"],
+            "weight":0
+        },
+        {
+            "name": "E_0_9_D",
+            "nodes":["V_0_9_U","V_0_9_D"],
+            "weight":0
+        },
+        {
+            "name": "E_0_9_U",
+            "nodes":["V_0_9_D","V_0_9_U"],
+            "weight":0
+        },
+        {
+            "name": "E_0_10_D",
+            "nodes":["V_0_10_U","V_0_10_D"],
+            "weight":0
+        },
+        {
+            "name": "E_0_10_U",
+            "nodes":["V_0_10_D","V_0_10_U"],
+            "weight":0
+        },
+        {
+            "name": "E_0_11_D",
+            "nodes":["V_0_11_U","V_0_11_D"],
+            "weight":0
+        },
+        {
+            "name": "E_0_11_U",
+            "nodes":["V_0_11_D","V_0_11_U"],
+            "weight":0
+        },
+        {
+            "name": "E_0_12_D",
+            "nodes":["V_0_12_U","V_0_12_D"],
+            "weight":0
+        },
+        {
+            "name": "E_0_12_U",
+            "nodes":["V_0_12_D","V_0_12_U"],
+            "weight":0
         }
     ]
 }
