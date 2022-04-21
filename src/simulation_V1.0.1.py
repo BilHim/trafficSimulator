@@ -11,6 +11,7 @@ sim.create_roads([
     ((466, -143), (526, -143)),
 ])
 
+# TODO missing leaf nodes on the right of all rows 1-4.. need another node 17
 sim.create_gen({
     'vehicle_rate': 10,
     'vehicles': [
