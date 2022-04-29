@@ -1071,7 +1071,428 @@
                     "x":583,
                     "y":87
                 }
-        }
+        },
+        {
+            "name":"V_4_0_U",
+            "coordinates": 
+                {
+                    "x":-583,
+                    "y":196
+                }
+        },
+        {
+            "name":"V_4_0_D",
+            "coordinates": 
+                {
+                    "x":-583,
+                    "y":202
+                }
+        },
+        {
+            "name":"V_4_1_U",
+            "coordinates": 
+                {
+                    "x":-486,
+                    "y":196
+                }
+        },
+        {
+            "name":"V_4_1_D",
+            "coordinates": 
+                {
+                    "x":-486,
+                    "y":202
+                }
+        },
+        {
+            "name":"V_4_2_U",
+            "coordinates": 
+                {
+                    "x":-426,
+                    "y":196
+                }
+        },
+        {
+            "name":"V_4_2_D",
+            "coordinates": 
+                {
+                    "x":-426,
+                    "y":202
+                }
+        },
+        {
+            "name":"V_4_3_U",
+            "coordinates": 
+                {
+                    "x":-364,
+                    "y":196
+                }
+        },
+        {
+            "name":"V_4_3_D",
+            "coordinates": 
+                {
+                    "x":-364,
+                    "y":202
+                }
+        },
+        {
+            "name":"V_4_4_U",
+            "coordinates": 
+                {
+                    "x":-306,
+                    "y":196
+                }
+        },
+        {
+            "name":"V_4_4_D",
+            "coordinates": 
+                {
+                    "x":-306,
+                    "y":202
+                }
+        },
+        {
+            "name":"V_4_5_U",
+            "coordinates": 
+                {
+                    "x":-248,
+                    "y":196
+                }
+        },
+        {
+            "name":"V_4_5_D",
+            "coordinates": 
+                {
+                    "x":-248,
+                    "y":202
+                }
+        },
+        {
+            "name":"V_4_6_U",
+            "coordinates": 
+                {
+                    "x":-189,
+                    "y":196
+                }
+        },
+        {
+            "name":"V_4_6_D",
+            "coordinates": 
+                {
+                    "x":-189,
+                    "y":202
+                }
+        },
+        {
+            "name":"V_4_7_U",
+            "coordinates": 
+                {
+                    "x":-130,
+                    "y":196
+                }
+        },
+        {
+            "name":"V_4_7_D",
+            "coordinates": 
+                {
+                    "x":-130,
+                    "y":202
+                }
+        },
+        {
+            "name":"V_4_8_U",
+            "coordinates": 
+                {
+                    "x":45,
+                    "y":196
+                }
+        },
+        {
+            "name":"V_4_8_D",
+            "coordinates": 
+                {
+                    "x":45,
+                    "y":202
+                }
+        },
+        {
+            "name":"V_4_9_U",
+            "coordinates": 
+                {
+                    "x":108,
+                    "y":196
+                }
+        },
+        {
+            "name":"V_4_9_D",
+            "coordinates": 
+                {
+                    "x":108,
+                    "y":202
+                }
+        },
+        {
+            "name":"V_4_10_U",
+            "coordinates": 
+                {
+                    "x":173,
+                    "y":196
+                }
+        },
+        {
+            "name":"V_4_10_D",
+            "coordinates": 
+                {
+                    "x":173,
+                    "y":202
+                }
+        },
+        {
+            "name":"V_4_11_U",
+            "coordinates": 
+                {
+                    "x":230,
+                    "y":196
+                }
+        },
+        {
+            "name":"V_4_11_D",
+            "coordinates": 
+                {
+                    "x":230,
+                    "y":202
+                }
+        },
+        {
+            "name":"V_4_12_U",
+            "coordinates": 
+                {
+                    "x":290,
+                    "y":196
+                }
+        },
+        {
+            "name":"V_4_12_D",
+            "coordinates": 
+                {
+                    "x":290,
+                    "y":202
+                }
+        },
+        {
+            "name":"V_4_13_U",
+            "coordinates": 
+                {
+                    "x":350,
+                    "y":196
+                }
+        },
+        {
+            "name":"V_4_13_D",
+            "coordinates": 
+                {
+                    "x":350,
+                    "y":202
+                }
+        },
+        {
+            "name":"V_4_14_U",
+            "coordinates": 
+                {
+                    "x":406,
+                    "y":196
+                }
+        },
+        {
+            "name":"V_4_14_D",
+            "coordinates": 
+                {
+                    "x":406,
+                    "y":202
+                }
+        },
+        {
+            "name":"V_4_15_U",
+            "coordinates": 
+                {
+                    "x":466,
+                    "y":196
+                }
+        },
+        {
+            "name":"V_4_15_D",
+            "coordinates": 
+                {
+                    "x":466,
+                    "y":202
+                }
+        },
+        {
+            "name":"V_4_16_U",
+            "coordinates": 
+                {
+                    "x":526,
+                    "y":196
+                }
+        },
+        {
+            "name":"V_4_16_D",
+            "coordinates": 
+                {
+                    "x":526,
+                    "y":202
+                }
+        },
+        {
+            "name":"V_4_17_U",
+            "coordinates": 
+                {
+                    "x":583,
+                    "y":196
+                }
+        },
+        {
+            "name":"V_4_17_D",
+            "coordinates": 
+                {
+                    "x":583,
+                    "y":202
+                }
+        },
+        {
+            "name":"V_5_0_U",
+            "coordinates": 
+                {
+                    "x":-583,
+                    "y":278
+                }
+        },
+        {
+            "name":"V_5_1_U",
+            "coordinates": 
+                {
+                    "x":-486,
+                    "y":278
+                }
+        },
+        {
+            "name":"V_5_2_U",
+            "coordinates": 
+                {
+                    "x":-426,
+                    "y":278
+                }
+        },
+        {
+            "name":"V_5_3_U",
+            "coordinates": 
+                {
+                    "x":-364,
+                    "y":278
+                }
+        },
+        {
+            "name":"V_5_4_U",
+            "coordinates": 
+                {
+                    "x":-306,
+                    "y":278
+                }
+        },
+        {
+            "name":"V_5_5_U",
+            "coordinates": 
+                {
+                    "x":-248,
+                    "y":278
+                }
+        },
+        {
+            "name":"V_5_6_U",
+            "coordinates": 
+                {
+                    "x":-189,
+                    "y":278
+                }
+        },
+        {
+            "name":"V_5_7_U",
+            "coordinates": 
+                {
+                    "x":-130,
+                    "y":278
+                }
+        },{
+            "name":"V_5_8_U",
+            "coordinates": 
+                {
+                    "x":45,
+                    "y":278
+                }
+        },
+        {
+            "name":"V_5_9_U",
+            "coordinates": 
+                {
+                    "x":108,
+                    "y":278
+                }
+        },
+        {
+            "name":"V_5_10_U",
+            "coordinates": 
+                {
+                    "x":173,
+                    "y":278
+                }
+        },{
+            "name":"V_5_11_U",
+            "coordinates": 
+                {
+                    "x":230,
+                    "y":278
+                }
+        },
+        {
+            "name":"V_5_12_U",
+            "coordinates": 
+                {
+                    "x":290,
+                    "y":278
+                }
+        },{
+            "name":"V_5_13_U",
+            "coordinates": 
+                {
+                    "x":350,
+                    "y":278
+                }
+        },
+        {
+            "name":"V_5_14_U",
+            "coordinates": 
+                {
+                    "x":405,
+                    "y":278
+                }
+        },
+        {
+            "name":"V_5_15_U",
+            "coordinates": 
+                {
+                    "x":466,
+                    "y":278
+                }
+        },
+        {
+            "name":"V_5_16_U",
+            "coordinates": 
+                {
+                    "x":526,
+                    "y":278
+                }
+            }
     ],
     "edges":[
         {
@@ -2618,7 +3039,532 @@
             "name": "E_3_17_U",
             "nodes":["V_3_17_D","V_3_17_U"],
             "weight":0
+        },
+        {
+            "name": "E_127",
+            "nodes":["V_4_17_U","V_4_16_U"],
+            "weight":1
+        },
+        {
+            "name": "E_128",
+            "nodes":["V_4_16_U","V_4_15_U"],
+            "weight":1
+        },
+        {
+            "name": "E_129",
+            "nodes":["V_4_15_U","V_4_14_U"],
+            "weight":1
+        },
+        {
+            "name": "E_130",
+            "nodes":["V_4_14_U","V_4_13_U"],
+            "weight":1
+        },
+        {
+            "name": "E_131",
+            "nodes":["V_4_13_U","V_4_12_U"],
+            "weight":1
+        },
+        {
+            "name": "E_132",
+            "nodes":["V_4_12_U","V_4_11_U"],
+            "weight":1
+        },
+        {
+            "name": "E_133",
+            "nodes":["V_4_11_U","V_4_10_U"],
+            "weight":1
+        },
+        {
+            "name": "E_134",
+            "nodes":["V_4_10_U","V_4_9_U"],
+            "weight":1
+        },
+        {
+            "name": "E_135",
+            "nodes":["V_4_9_U","V_4_8_U"],
+            "weight":1
+        },
+        {
+            "name": "E_136",
+            "nodes":["V_4_8_U","V_4_7_U"],
+            "weight":3
+        },
+        {
+            "name": "E_137",
+            "nodes":["V_4_7_U","V_4_6_U"],
+            "weight":1
+        },
+        {
+            "name": "E_138",
+            "nodes":["V_4_6_U","V_4_5_U"],
+            "weight":1
+        },
+        {
+            "name": "E_139",
+            "nodes":["V_4_5_U","V_4_4_U"],
+            "weight":1
+        },
+        {
+            "name": "E_140",
+            "nodes":["V_4_4_U","V_4_3_U"],
+            "weight":1
+        },
+        {
+            "name": "E_141",
+            "nodes":["V_4_3_U","V_4_2_U"],
+            "weight":1
+        },
+        {
+            "name": "E_142",
+            "nodes":["V_4_2_U","V_4_1_U"],
+            "weight":1
+        },
+        {
+            "name": "E_143",
+            "nodes":["V_4_1_U","V_4_0_U"],
+            "weight":1
+        },
+        {
+            "name": "E_144",
+            "nodes":["V_4_16_D","V_4_17_D"],
+            "weight":1
+        },
+        {
+            "name": "E_145",
+            "nodes":["V_4_15_D","V_4_16_D"],
+            "weight":1
+        },
+        {
+            "name": "E_146",
+            "nodes":["V_4_14_D","V_4_15_D"],
+            "weight":1
+        },
+        {
+            "name": "E_147",
+            "nodes":["V_4_13_D","V_4_14_D"],
+            "weight":1
+        },
+        {
+            "name": "E_148",
+            "nodes":["V_4_12_D","V_4_13_D"],
+            "weight":1
+        },
+        {
+            "name": "E_149",
+            "nodes":["V_4_11_D","V_4_12_D"],
+            "weight":1
+        },
+        {
+            "name": "E_150",
+            "nodes":["V_4_10_D","V_4_11_D"],
+            "weight":1
+        },
+        {
+            "name": "E_151",
+            "nodes":["V_4_9_D","V_4_10_D"],
+            "weight":1
+        },
+        {
+            "name": "E_152",
+            "nodes":["V_4_8_D","V_4_9_D"],
+            "weight":1
+        },
+        {
+            "name": "E_153",
+            "nodes":["V_4_7_D","V_4_8_D"],
+            "weight":3
+        },
+        {
+            "name": "E_154",
+            "nodes":["V_4_6_D","V_4_7_D"],
+            "weight":1
+        },
+        {
+            "name": "E_155",
+            "nodes":["V_4_5_D","V_4_6_D"],
+            "weight":1
+        },
+        {
+            "name": "E_156",
+            "nodes":["V_4_4_D","V_4_5_D"],
+            "weight":1
+        },
+        {
+            "name": "E_157",
+            "nodes":["V_4_3_D","V_4_4_D"],
+            "weight":1
+        },
+        {
+            "name": "E_158",
+            "nodes":["V_4_2_D","V_4_3_D"],
+            "weight":1
+        },
+        {
+            "name": "E_159",
+            "nodes":["V_4_1_D","V_4_2_D"],
+            "weight":1
+        },
+        {
+            "name": "E_160",
+            "nodes":["V_4_0_D","V_4_1_D"],
+            "weight":1
+        },
+        {
+            "name": "E_L_50",
+            "nodes":["V_3_0_D","V_4_0_U"],
+            "weight":2
+        },
+        {
+            "name": "E_L_51",
+            "nodes":["V_4_1_U","V_3_1_D"],
+            "weight":2
+        },
+        {
+            "name": "E_L_52",
+            "nodes":["V_3_2_D","V_4_2_U"],
+            "weight":2
+        },
+        {
+            "name": "E_L_53",
+            "nodes":["V_4_3_U","V_3_3_D"],
+            "weight":2
+        },
+        {
+            "name": "E_L_54",
+            "nodes":["V_3_4_D","V_4_4_U"],
+            "weight":2
+        },
+        {
+            "name": "E_L_55",
+            "nodes":["V_4_5_U","V_3_5_D"],
+            "weight":2
+        },
+        {
+            "name": "E_L_56",
+            "nodes":["V_3_6_D","V_4_6_U"],
+            "weight":2
+        },
+        {
+            "name": "E_L_57",
+            "nodes":["V_4_7_U","V_3_7_D"],
+            "weight":2
+        },
+        {
+            "name": "E_L_58",
+            "nodes":["V_3_8_D","V_4_8_U"],
+            "weight":2
+        },
+        {
+            "name": "E_L_59",
+            "nodes":["V_4_9_U","V_3_9_D"],
+            "weight":2
+        },
+        {
+            "name": "E_L_60",
+            "nodes":["V_3_10_D","V_4_10_U"],
+            "weight":2
+        },
+        {
+            "name": "E_L_61",
+            "nodes":["V_4_11_U","V_3_11_D"],
+            "weight":2
+        },
+        {
+            "name": "E_L_62",
+            "nodes":["V_3_12_D","V_4_12_U"],
+            "weight":2
+        },
+        {
+            "name": "E_L_63",
+            "nodes":["V_4_13_U","V_3_13_D"],
+            "weight":2
+        },
+        {
+            "name": "E_L_64",
+            "nodes":["V_3_14_D","V_4_14_U"],
+            "weight":2
+        },
+        {
+            "name": "E_L_65",
+            "nodes":["V_4_15_U","V_3_15_D"],
+            "weight":2
+        },
+        {
+            "name": "E_L_66",
+            "nodes":["V_3_16_D","V_4_16_U"],
+            "weight":2
+        },
+        {
+            "name": "E_L_67",
+            "nodes":["V_4_17_U","V_3_17_D"],
+            "weight":2
+        },
+        {
+            "name": "E_4_0_D",
+            "nodes":["V_4_0_U","V_4_0_D"],
+            "weight":0
+        },
+        {
+            "name": "E_4_0_U",
+            "nodes":["V_4_0_D","V_4_0_U"],
+            "weight":0
+        },
+        {
+            "name": "E_4_1_D",
+            "nodes":["V_4_1_U","V_4_1_D"],
+            "weight":0
+        },
+        {
+            "name": "E_4_1_U",
+            "nodes":["V_4_1_D","V_4_1_U"],
+            "weight":0
+        },
+        {
+            "name": "E_4_2_D",
+            "nodes":["V_4_2_U","V_4_2_D"],
+            "weight":0
+        },
+        {
+            "name": "E_4_2_U",
+            "nodes":["V_4_2_D","V_4_2_U"],
+            "weight":0
+        },
+        {
+            "name": "E_4_3_D",
+            "nodes":["V_4_3_U","V_4_3_D"],
+            "weight":0
+        },
+        {
+            "name": "E_4_3_U",
+            "nodes":["V_4_3_D","V_4_3_U"],
+            "weight":0
+        },
+        {
+            "name": "E_4_4_D",
+            "nodes":["V_4_4_U","V_4_4_D"],
+            "weight":0
+        },
+        {
+            "name": "E_4_4_U",
+            "nodes":["V_4_4_D","V_4_4_U"],
+            "weight":0
+        },
+        {
+            "name": "E_4_5_D",
+            "nodes":["V_4_5_U","V_4_5_D"],
+            "weight":0
+        },
+        {
+            "name": "E_4_5_U",
+            "nodes":["V_4_5_D","V_4_5_U"],
+            "weight":0
+        },
+        {
+            "name": "E_4_6_D",
+            "nodes":["V_4_6_U","V_4_6_D"],
+            "weight":0
+        },
+        {
+            "name": "E_4_6_U",
+            "nodes":["V_4_6_D","V_4_6_U"],
+            "weight":0
+        },
+        {
+            "name": "E_4_7_D",
+            "nodes":["V_4_7_U","V_4_7_D"],
+            "weight":0
+        },
+        {
+            "name": "E_4_7_U",
+            "nodes":["V_4_7_D","V_4_7_U"],
+            "weight":0
+        },
+        {
+            "name": "E_4_8_D",
+            "nodes":["V_4_8_U","V_4_8_D"],
+            "weight":0
+        },
+        {
+            "name": "E_4_8_U",
+            "nodes":["V_4_8_D","V_4_8_U"],
+            "weight":0
+        },
+        {
+            "name": "E_4_9_D",
+            "nodes":["V_4_9_U","V_4_9_D"],
+            "weight":0
+        },
+        {
+            "name": "E_4_9_U",
+            "nodes":["V_4_9_D","V_4_9_U"],
+            "weight":0
+        },
+        {
+            "name": "E_4_10_D",
+            "nodes":["V_4_10_U","V_4_10_D"],
+            "weight":0
+        },
+        {
+            "name": "E_4_10_U",
+            "nodes":["V_4_10_D","V_4_10_U"],
+            "weight":0
+        },
+        {
+            "name": "E_4_11_D",
+            "nodes":["V_4_11_U","V_4_11_D"],
+            "weight":0
+        },
+        {
+            "name": "E_4_11_U",
+            "nodes":["V_4_11_D","V_4_11_U"],
+            "weight":0
+        },
+        {
+            "name": "E_4_12_D",
+            "nodes":["V_4_12_U","V_4_12_D"],
+            "weight":0
+        },
+        {
+            "name": "E_4_12_U",
+            "nodes":["V_4_12_D","V_4_12_U"],
+            "weight":0
+        },
+        {
+            "name": "E_4_13_D",
+            "nodes":["V_4_13_U","V_4_13_D"],
+            "weight":0
+        },
+        {
+            "name": "E_4_13_U",
+            "nodes":["V_4_13_D","V_4_13_U"],
+            "weight":0
+        },
+        {
+            "name": "E_4_14_D",
+            "nodes":["V_4_14_U","V_4_14_D"],
+            "weight":0
+        },
+        {
+            "name": "E_4_14_U",
+            "nodes":["V_4_14_D","V_4_14_U"],
+            "weight":0
+        },
+        {
+            "name": "E_4_15_D",
+            "nodes":["V_4_15_U","V_4_15_D"],
+            "weight":0
+        },
+        {
+            "name": "E_4_15_U",
+            "nodes":["V_4_15_D","V_4_15_U"],
+            "weight":0
+        },
+        {
+            "name": "E_4_16_D",
+            "nodes":["V_4_16_U","V_4_16_D"],
+            "weight":0
+        },
+        {
+            "name": "E_4_16_U",
+            "nodes":["V_4_16_D","V_4_16_U"],
+            "weight":0
+        },
+        {
+            "name": "E_4_17_D",
+            "nodes":["V_4_17_U","V_4_17_D"],
+            "weight":0
+        },
+        {
+            "name": "E_4_17_U",
+            "nodes":["V_4_17_D","V_4_17_U"],
+            "weight":0
+        },
+        {
+            "name": "E_L_68",
+            "nodes":["V_4_0_D","V_5_0_U"],
+            "weight":2
+        },{
+            "name": "E_L_69",
+            "nodes":["V_5_1_U","V_4_1_D"],
+            "weight":2
+        },
+        {
+            "name": "E_L_70",
+            "nodes":["V_4_2_D","V_5_2_U"],
+            "weight":2
+        },
+        {
+            "name": "E_L_71",
+            "nodes":["V_5_3_U","V_4_3_D"],
+            "weight":2
+        },
+        {
+            "name": "E_L_72",
+            "nodes":["V_4_4_D","V_5_4_U"],
+            "weight":2
+        },
+        {
+            "name": "E_L_73",
+            "nodes":["V_5_5_U","V_4_5_D"],
+            "weight":2
+        },
+        {
+            "name": "E_L_74",
+            "nodes":["V_4_6_D","V_5_6_U"],
+            "weight":2
+        },
+        {
+            "name": "E_L_75",
+            "nodes":["V_5_7_U","V_4_7_D"],
+            "weight":2
+        },
+        {
+            "name": "E_L_76",
+            "nodes":["V_4_8_D","V_5_8_U"],
+            "weight":2
+        },
+        {
+            "name": "E_L_77",
+            "nodes":["V_5_9_U","V_4_9_D"],
+            "weight":2
+        },
+        {
+            "name": "E_L_78",
+            "nodes":["V_4_10_D","V_5_10_U"],
+            "weight":2
+        },
+        {
+            "name": "E_L_79",
+            "nodes":["V_5_11_U","V_4_11_D"],
+            "weight":2
+        },
+        {
+            "name": "E_L_80",
+            "nodes":["V_4_12_D","V_5_12_U"],
+            "weight":2
+        },
+        {
+            "name": "E_L_81",
+            "nodes":["V_5_13_U","V_4_13_D"],
+            "weight":2
+        },
+        {
+            "name": "E_L_82",
+            "nodes":["V_4_14_D","V_5_14_U"],
+            "weight":2
+        },
+        {
+            "name": "E_L_83",
+            "nodes":["V_5_15_U","V_4_15_D"],
+            "weight":2
+        },
+        {
+            "name": "E_L_84",
+            "nodes":["V_4_16_D","V_5_16_U"],
+            "weight":2
         }
-
+    
     ]
 }
+
