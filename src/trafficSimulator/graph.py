@@ -1,4 +1,5 @@
 import networkx as nx
+import os
 import json
 
 
@@ -10,8 +11,7 @@ class Graph:
         self.initG()
 
     def initG(self):
-        f = open(
-            "./Graph_Data.json")
+        f = open(f"{os.getcwd()}/src/trafficSimulator/Graph_Data.json")
         self.graphData = json.load(f)
         for node in self.graphData["nodes"]:
             self.G.add_node(node["name"], coordinates=node["coordinates"])
