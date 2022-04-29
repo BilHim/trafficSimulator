@@ -13,10 +13,10 @@ sim.create_roads(G.getEdgesTuples())
 
 # TODO missing leaf nodes on the right of all rows 1-4.. need another node 17
 sim.create_gen({
-    'vehicle_rate': 10,
+    'vehicle_rate': 100,
     'vehicles': [
-        [2, {'path': G.getPath("V_0_0_U", "V_0_5_U") +
-             G.getPath("V_0_5_U", "V_0_0_D")}],
+        [80, {'path': G.getPath("V_0_2_U", "V_3_2_D")}],
+        [15, {'path': G.getPath("V_1_0_D", "V_1_17_D")}],
     ]
 })
 
