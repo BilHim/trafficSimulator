@@ -3,6 +3,7 @@ from copy import deepcopy
 from .vehicle_generator import VehicleGenerator
 from .traffic_signal import TrafficSignal
 
+
 class Simulation:
     def __init__(self, config={}):
         # Set default configuration
@@ -57,7 +58,8 @@ class Simulation:
         # Check roads for out of bounds vehicle
         for index, road in enumerate(self.roads):
             # If road has no vehicles, continue
-            if len(road.vehicles) == 0: continue
+            if len(road.vehicles) == 0:
+                continue
             # If not
             vehicle = road.vehicles[0]
             # If first vehicle is out of road bounds
@@ -74,14 +76,14 @@ class Simulation:
                     self.roads[next_road_index].vehicles.append(new_vehicle)
                 else:
                     self.vehicleCount -= 1
-                    if(index == 15): self.road_one_tp +=1
+                    if(index == 15):
+                        self.road_one_tp += 1
 
                 # In all cases, remove it from its road
                 road.vehicles.popleft()
         # Increment time
         self.t += self.dt
         self.frame_count += 1
-
 
     def run(self, steps):
         for _ in range(steps):
