@@ -1,0 +1,46 @@
+# config file version
+apiVersion: 1
+
+# list of datasources that should be deleted from the database
+deleteDatasources:
+  - name: Influxdb
+    orgId: 1
+
+# list of datasources to insert/update depending
+# whats available in the database
+datasources:
+  # <string, required> name of the datasource. Required
+- name: InfluxDB
+  # <string, required> datasource type. Required
+  type: influxdb
+  # <string, required> access mode. direct or proxy. Required
+  access: proxy
+  # <int> org id. will default to orgId 1 if not specified
+  orgId: 1
+  # <string> url
+  url: http://influxdb:8086
+  # <string> database password, if used
+  password: "admin1234"
+  # <string> database user, if used
+  user: "admin1234"
+  # <string> database name, if used
+  database: "TrafficSimultionDB"
+  # <bool> enable/disable basic auth
+  basicAuth: false
+#  withCredentials:
+  # <bool> mark as default datasource. Max one per org
+  isDefault: true
+  # <map> fields that will be converted to json and stored in json_data
+  jsonData:
+    timeInterval: "5s"
+#     graphiteVersion: "1.1"
+#     tlsAuth: false
+#     tlsAuthWithCACert: false
+#  # <string> json object of data that will be encrypted.
+#  secureJsonData:
+#    tlsCACert: "..."
+#    tlsClientCert: "..."
+#    tlsClientKey: "..."
+  version: 1
+  # <bool> allow users to edit datasources from the UI.
+  editable: false

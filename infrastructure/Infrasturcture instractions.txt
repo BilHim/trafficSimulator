@@ -1,0 +1,14 @@
+!!!Run the docker compose file from infrastructure/docker-compose!!!
+
+Manage InfluxDB using InfluxQL(inside the docker container):
+https://docs.influxdata.com/influxdb/v1.8/query_language/manage-database/#delete-a-database-with-drop-database
+
+(InfluxDB) - Show measurments: 
+https://stackoverflow.com/questions/41299571/how-to-create-a-measurement-in-influxdb
+
+send data from Python to InfluxDB:
+1. use the data_to_send.json tamplate (tested!)
+2. write data: https://www.influxdata.com/blog/getting-started-python-influxdb/ 
+
+Config docker enviroment (GitHub reposetory):
+https://github.com/bcremer/docker-telegraf-influx-grafana-stack 

@@ -1,50 +1,92 @@
-version: "3"
+version: '3.6'
 services:
-  grafana:
-    image: grafana/grafana
-    container_name: grafana_container
-    networks:
-      - grafana_network
-    restart: always
-    ports:
-      - 3000:3000
+  telegraf:
+    image: telegraf:1.18-alpine
     volumes:
-      - grafana_data:/var/lib/grafana
+    - ./infrastructure/telegraf/etc/telegraf.conf:/etc/telegraf/telegraf.conf:ro
     depends_on:
       - influxdb
-    environment:
-      - GF_SECURITY_ADMIN_USER=grafana_user
-      - GF_SECURITY_ADMIN_PASSWORD=grafana_user_password
-      - GF_DATABASE_HOST=influxdb:8086
-      - GF_DATABASE_NAME=influxdb
-  
+    links:
+      - influxdb
+    ports:
+    - '127.0.0.1:8125:8125/udp'
 
   influxdb:
-    image: influxdb:latest
-    container_name: influxdb_container
-    networks:
-      - grafana_network
-    restart: always
+    image: influxdb:1.8-alpine
+    env_file: configuration.env
     ports:
-      - 8086:8086
+      - '127.0.0.1:8086:8086'
     volumes:
+      - ./:/imports
       - influxdb_data:/var/lib/influxdb
-    environment:
-      - DOCKER_INFLUXDB_INIT_USERNAME=influx_user
-      - DOCKER_INFLUXDB_INIT_PASSWORD=influx_user_password
-      - DOCKER_INFLUXDB_INIT_ORG=org
-      - DOCKER_INFLUXDB_INIT_BUCKET=bucket
-      - DOCKER_INFLUXDB_INIT_RETENTION= 
-      - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=token
-      - INFLUXDB_DB=influxdb
-      - INFLUXDB_USER=grafana
-      - INFLUXDB_USER_PASSWORD=password
-      - INFLUXDB_ADMIN_ENABLED=true
-      - INFLUXDB_ADMIN_USER=admin
-      - INFLUXDB_ADMIN_PASSWORD=password
+    # command:
+
+  grafana:
+    image: grafana/grafana:8.0.2
+    depends_on:
+      - influxdb
+    env_file: configuration.env
+    links:
+      - influxdb
+    ports:
+      - '127.0.0.1:3000:3000'
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./infrastructure/grafana/provisioning/:/etc/grafana/provisioning/
+      - ./infrastructure/grafana/dashboards/:/var/lib/grafana/dashboards/
 
 volumes:
-  grafana_data:
-  influxdb_data:
-networks:
-  grafana_network:
+  grafana_data: {}
+  influxdb_data: {}
+
+
+# version: "3"
+# services:
+#   grafana:
+#     image: grafana/grafana
+#     container_name: grafana_container
+#     networks:
+#       - grafana_network
+#     restart: always
+#     ports:
+#       - 3000:3000
+#     volumes:
+#       - grafana_data:/var/lib/grafana
+#     depends_on:
+#       - influxdb
+#     environment:
+#       - GF_SECURITY_ADMIN_USER=grafana_user
+#       - GF_SECURITY_ADMIN_PASSWORD=grafana_user_password
+#       - GF_DATABASE_HOST=influxdb:8086
+#       - GF_DATABASE_NAME=influxdb
+  
+
+#   influxdb:
+#     image: influxdb:latest
+#     container_name: influxdb_container
+#     networks:
+#       - grafana_network
+#     restart: always
+#     ports:
+#       - 8086:8086
+#     volumes:
+#       - influxdb_data:/var/lib/influxdb
+#     environment:
+#       - DOCKER_INFLUXDB_INIT_USERNAME=influx_user
+#       - DOCKER_INFLUXDB_INIT_PASSWORD=influx_user_password
+#       - DOCKER_INFLUXDB_INIT_ORG=org
+#       - DOCKER_INFLUXDB_INIT_BUCKET=bucket
+#       - DOCKER_INFLUXDB_INIT_RETENTION= 
+#       - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=token
+#       - INFLUXDB_DB=influxdb
+#       - INFLUXDB_USER=grafana
+#       - INFLUXDB_USER_PASSWORD=password
+#       - INFLUXDB_ADMIN_ENABLED=true
+#       - INFLUXDB_ADMIN_USER=admin
+#       - INFLUXDB_ADMIN_PASSWORD=password
+
+# volumes:
+#   grafana_data:
+#   influxdb_data:
+# networks:
+#   grafana_network:
