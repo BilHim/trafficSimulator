@@ -1,3 +1,4 @@
+import uuid
 import numpy as np
 
 class Vehicle:
@@ -11,8 +12,10 @@ class Vehicle:
 
         # Calculate properties
         self.init_properties()
-
+        
     def set_default_config(self):    
+        self.id = uuid.uuid4()
+
         self.l = 4
         self.s0 = 4
         self.T = 1
@@ -24,7 +27,7 @@ class Vehicle:
         self.current_road_index = 0
 
         self.x = 0
-        self.v = self.v_max
+        self.v = 0
         self.a = 0
         self.stopped = False
 
@@ -54,16 +57,3 @@ class Vehicle:
         if self.stopped: 
             self.a = -self.b_max*self.v/self.v_max
         
-    def stop(self):
-        self.stopped = True
-
-    def unstop(self):
-        self.stopped = False
-
-    def slow(self, v):
-        self.v_max = v
-
-    def unslow(self):
-        self.v_max = self._v_max
-        
-

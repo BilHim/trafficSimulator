@@ -1,0 +1,43 @@
+[project]
+name = "trafficSimulator"
+version = "0.0.1"
+description = "A microscopic traffic simulation in Python"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {file = "LICENSE"}
+keywords = ["traffic", "setuptools", "development"]
+
+authors = [
+  {name = "Bilal Himite", email = "mail.bilalhimite@gmail.com" }
+]
+
+classifiers = [
+  "Development Status :: 3 - Alpha",
+
+  "License :: OSI Approved :: MIT License",
+
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3 :: Only",
+]
+
+dependencies = [
+  "numpy", 
+  "scipy",
+  "dearpygui"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/BilHim/trafficSimulator"
+"Bug Reports" = "https://github.com/BilHim/trafficSimulator/issues"
+"Funding" = "https://ko-fi.com/bilhim"
+"Say Thanks!" = "https://saythanks.io/to/BilHim"
+"Source" = "https://github.com/BilHim/trafficSimulator/"
+
+[build-system]
+requires = ["setuptools>=43.0.0", "wheel"]
+build-backend = "setuptools.build_meta"

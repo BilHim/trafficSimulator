@@ -2,9 +2,7 @@ from .vehicle import Vehicle
 from numpy.random import randint
 
 class VehicleGenerator:
-    def __init__(self, sim, config={}):
-        self.sim = sim
-
+    def __init__(self, config={}):
         # Set default configurations
         self.set_default_config()
 
@@ -17,7 +15,7 @@ class VehicleGenerator:
 
     def set_default_config(self):
         """Set default configuration"""
-        self.vehicle_rate = 20
+        self.vehicle_rate = 10
         self.vehicles = [
             (1, {})
         ]
@@ -35,18 +33,17 @@ class VehicleGenerator:
             if r <= 0:
                 return Vehicle(config)
 
-    def update(self):
+    def update(self, simulation):
         """Add vehicles"""
-        if self.sim.t - self.last_added_time >= 60 / self.vehicle_rate:
+        if simulation.t - self.last_added_time >= 60 / self.vehicle_rate:
+            print('adding vehicle')
             # If time elasped after last added vehicle is
             # greater than vehicle_period; generate a vehicle
-            road = self.sim.roads[self.upcoming_vehicle.path[0]]      
-            if len(road.vehicles) == 0\
-               or road.vehicles[-1].x > self.upcoming_vehicle.s0 + self.upcoming_vehicle.l:
+            segment = simulation.segments[self.upcoming_vehicle.path[0]]      
+            if len(segment.vehicles) == 0\
+               or simulation.vehicles[segment.vehicles[-1]].x > self.upcoming_vehicle.s0 + self.upcoming_vehicle.l:
                 # If there is space for the generated vehicle; add it
-                self.upcoming_vehicle.time_added = self.sim.t
-                road.vehicles.append(self.upcoming_vehicle)
+                simulation.add_vehicle(self.upcoming_vehicle)
                 # Reset last_added_time and upcoming_vehicle
-                self.last_added_time = self.sim.t
+                self.last_added_time = simulation.t
             self.upcoming_vehicle = self.generate_vehicle()
-
