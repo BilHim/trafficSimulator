@@ -37,7 +37,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![trafficSimulator screenshot][product-screenshot]](https://example.com)
+[![trafficSimulator screenshot][product-screenshot]](https://towardsdatascience.com/simulating-traffic-flow-in-python-ee1eab4dd20f)
 
 **trafficSimulator** is a Python project that aims to provide a flexible and user-friendly platform for creating and testing traffic scenarios and analyzing their outcomes.
 
@@ -147,7 +147,7 @@ Distributed under the MIT License. See [`LICENSE`](https://github.com/BilHim/tra
 Bilal Himite
 * LinkedIn: [@bilalhimite][linkedin-url]
 * Medium: [@bilhim](https://medium.com/@bilhim)
-* Email: hello@bilalhimite.com
+* Email: hello@bilalhimite.me
 * Portfolio: [bilalhimite.me](https://bilalhimite.me)
 
 Project Link: [https://github.com/BilHim/trafficSimulator](https://github.com/BilHim/trafficSimulator)
