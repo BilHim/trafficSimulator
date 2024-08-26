@@ -147,7 +147,8 @@ Distributed under the MIT License. See [`LICENSE`](https://github.com/BilHim/tra
 Bilal Himite
 * LinkedIn: [@bilalhimite][linkedin-url]
 * Medium: [@bilhim](https://medium.com/@bilhim)
-* Email: mail.bilalhimite@gmail.com
+* Email: hello@bilalhimite.com
+* Portfolio: [bilalhimite.me](https://bilalhimite.me)
 
 Project Link: [https://github.com/BilHim/trafficSimulator](https://github.com/BilHim/trafficSimulator)
 
