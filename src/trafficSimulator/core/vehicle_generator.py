@@ -1,7 +1,9 @@
+from typing import Any, Dict, List, Tuple
 from .vehicle import Vehicle
 from numpy.random import randint
 
 class VehicleGenerator:
+    vehicle_groups: List[Tuple[int,Dict[str,Any]]]
     def __init__(self, config={}):
         # Set default configurations
         self.set_default_config()
@@ -16,7 +18,7 @@ class VehicleGenerator:
     def set_default_config(self):
         """Set default configuration"""
         self.vehicle_rate = 10
-        self.vehicles = [
+        self.vehicle_groups = [
             (1, {})
         ]
         self.last_added_time = 0
@@ -24,11 +26,11 @@ class VehicleGenerator:
     def init_properties(self):
         self.upcoming_vehicle = self.generate_vehicle()
 
-    def generate_vehicle(self):
+    def generate_vehicle(self)->Vehicle:
         """Returns a random vehicle from self.vehicles with random proportions"""
-        total = sum(pair[0] for pair in self.vehicles)
+        total = sum(pair[0] for pair in self.vehicle_groups)
         r = randint(1, total+1)
-        for (weight, config) in self.vehicles:
+        for (weight, config) in self.vehicle_groups:
             r -= weight
             if r <= 0:
                 return Vehicle(config)

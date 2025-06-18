@@ -1,3 +1,4 @@
+from typing import Deque, List, Tuple
 from scipy.spatial import distance
 from scipy.interpolate import interp1d
 from collections import deque
@@ -6,8 +7,12 @@ from abc import ABC, abstractmethod
 from math import sqrt
 from scipy.integrate import quad
 
+from trafficSimulator.core.vehicle import Vehicle
+
 class Segment(ABC):
-    def __init__(self, points):
+    points: List[Tuple[float]]
+    vehicles: Deque[Vehicle]
+    def __init__(self, points:List[Tuple[float,float]]):
         self.points = points
         self.vehicles = deque()
 
@@ -40,18 +45,18 @@ class Segment(ABC):
     def remove_vehicle(self, veh):
         self.vehicles.remove(veh.id)
 
-    @abstractmethod
-    def compute_x(self, t):
-        pass
-    @abstractmethod
-    def compute_y(self, t):
-        pass
-    @abstractmethod
-    def compute_dx(self, t):
-        pass
-    @abstractmethod
-    def compute_dy(self, t):
-        pass
+    # @abstractmethod
+    # def compute_x(self, t):
+    #     pass
+    # @abstractmethod
+    # def compute_y(self, t):
+    #     pass
+    # @abstractmethod
+    # def compute_dx(self, t):
+    #     pass
+    # @abstractmethod
+    # def compute_dy(self, t):
+    #     pass
 
     def abs_f(self, t):
         return sqrt(self.compute_dx(t)**2 + self.compute_dy(t)**2)

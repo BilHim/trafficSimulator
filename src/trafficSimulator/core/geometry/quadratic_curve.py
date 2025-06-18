@@ -1,10 +1,15 @@
+from typing import Tuple
 from .segment import Segment
 
 PAS = 0.01
 CURVE_RESOLUTION = 50
 
 class QuadraticCurve(Segment):
-    def __init__(self, start, control, end):
+    start: Tuple[float,float]
+    control: Tuple[float,float]
+    end: Tuple[float,float]
+
+    def __init__(self, start:Tuple[float,float], control:Tuple[float,float], end:Tuple[float,float]):
         # Store characteristic points
         self.start = start
         self.control = control

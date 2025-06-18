@@ -1,3 +1,4 @@
+from typing import Dict, List
 from .vehicle_generator import VehicleGenerator
 from .geometry.quadratic_curve import QuadraticCurve
 from .geometry.cubic_curve import CubicCurve
@@ -6,26 +7,36 @@ from .vehicle import Vehicle
 
 
 class Simulation:
+    # static attributes
+    segments: List[Segment]
+    vehicle_generators: List[VehicleGenerator]
+
+    # dynamic attributes
+    vehicles: Dict[str, Vehicle]
+    t: int
+    frame_count: int
+    dt: float
+
     def __init__(self):
         self.segments = []
+        self.vehicle_generators = []
         self.vehicles = {}
-        self.vehicle_generator = []
 
         self.t = 0.0
         self.frame_count = 0
         self.dt = 1/60  
 
 
-    def add_vehicle(self, veh):
+    def add_vehicle(self, veh:Vehicle):
         self.vehicles[veh.id] = veh
         if len(veh.path) > 0:
             self.segments[veh.path[0]].add_vehicle(veh)
 
-    def add_segment(self, seg):
+    def add_segment(self, seg:Segment):
         self.segments.append(seg)
 
-    def add_vehicle_generator(self, gen):
-        self.vehicle_generator.append(gen)
+    def add_vehicle_generator(self, gen:VehicleGenerator):
+        self.vehicle_generators.append(gen)
 
     
     def create_vehicle(self, **kwargs):
@@ -83,7 +94,7 @@ class Simulation:
                 segment.vehicles.popleft() 
 
         # Update vehicle generators
-        for gen in self.vehicle_generator:
+        for gen in self.vehicle_generators:
             gen.update(self)
         # Increment time
         self.t += self.dt

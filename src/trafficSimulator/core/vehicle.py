@@ -1,7 +1,25 @@
+from typing import List, Optional
 import uuid
 import numpy as np
 
 class Vehicle:
+    # static attributes
+    id: str
+    path: List[int]
+    l = 4
+    s0 = 4
+    T = 1
+    v_max:float
+    a_max:float
+    b_max:float
+
+    # dynamic attributes
+    current_road_index: int
+    x: float
+    v: float
+    a: float
+    stopped: bool
+
     def __init__(self, config={}):
         # Set default configuration
         self.set_default_config()
@@ -35,7 +53,7 @@ class Vehicle:
         self.sqrt_ab = 2*np.sqrt(self.a_max*self.b_max)
         self._v_max = self.v_max
 
-    def update(self, lead, dt):
+    def update(self, lead_vehicle:Optional["Vehicle"], dt):
         # Update position and velocity
         if self.v + self.a*dt < 0:
             self.x -= 1/2*self.v*self.v/self.a
@@ -46,9 +64,9 @@ class Vehicle:
         
         # Update acceleration
         alpha = 0
-        if lead:
-            delta_x = lead.x - self.x - lead.l
-            delta_v = self.v - lead.v
+        if lead_vehicle:
+            delta_x = lead_vehicle.x - self.x - lead_vehicle.l
+            delta_v = self.v - lead_vehicle.v
 
             alpha = (self.s0 + max(0, self.T*self.v + delta_v*self.v/self.sqrt_ab)) / delta_x
 
